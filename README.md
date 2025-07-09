@@ -1,4 +1,4 @@
-![pacofstrap logo](C.png)
+![pacofstrap logo](20250709_163935_0000.png)
 
 # pacofstrap-alpha
 ## pacstrap for offline installation(manuel arch installation)
