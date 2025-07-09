@@ -4,6 +4,7 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "string": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "chrono": "cpp"
     },
 }
