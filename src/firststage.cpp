@@ -33,8 +33,6 @@ void firststage() {
     int mresult; //command result
 
     //commands
-    std::string uuid_command = "blkid -o value -s UUID /dev/"; //Get UUID command
-    uuid_command  += usb; //combine UUID command and usb (sdxy) 
     string mcmd = "mount UUID=" + usbuuid + " /mnt/pacofstrap" ; //mount command
     string umcmd = "umount UUID=" +usbuuid + " /mnt/pacofstrap" ; //umount command
     string pacman_command = "pacman -Sw --cachedir /mnt/pacofstrap/ofpkgs --noconfirm"; //pacman command
@@ -63,6 +61,8 @@ void firststage() {
     
 
     //Creating pipe
+    std::string uuid_command = "blkid -o value -s UUID /dev/"; //Get UUID command
+    uuid_command  += usb; //combine UUID command and usb (sdxy) 
     FILE* pipe = popen(uuid_command.c_str(), "r");
     if (!pipe) {
         std::cerr << "\033[31m get UUID command can't. runned" << std::endl; //ERROR CHECK
@@ -76,7 +76,6 @@ void firststage() {
 
     //closing pipe
     pclose(pipe);
-
     //Removing \n
     if (!usbuuid.empty() && usbuuid.back() == '\n') {
         usbuuid.pop_back();
