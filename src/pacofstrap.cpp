@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 	if(getuid() == 0){
 		//Info
-		cout << "Welcome to pacofstrap beta! Which stage are you on?" << endl;
+		cout << "Welcome to \033[32mpacofstrap\033[0m \033[31mbeta!\033[0m Which stage are you on?" << endl;
 		cout << "1: Before installation, 2: In archiso." << endl;
 		
 		//varibles

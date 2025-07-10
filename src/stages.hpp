@@ -1,4 +1,4 @@
-#ifndef STAGES_HPP
+#ifndef STAGES_HPP 
 #define STAGES_HPP
 
 void firststage();

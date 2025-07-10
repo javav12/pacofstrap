@@ -28,10 +28,10 @@ void secondstage(){
     cin >> diskpath;
 
     //Info
-    cout << "Pacofstrap, now calling pacstrap..." << endl;
+    cout << "\033[32mPacofstrap, now calling pacstrap...\033[0m" << endl;
     
     //command
-    cp_packs = "cp "+ diskpath +"/*.zst /mnt/var/cache/pacman/pkg/";
+    cp_packs = "cp "+ diskpath +"/ofpkgs/*.zst /mnt/var/cache/pacman/pkg/";
     
     // Command AND results
     cpresult = system(cp_packs.c_str()) ;
